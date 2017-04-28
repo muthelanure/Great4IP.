@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="Course"
-        android:textColor="#000000"
+        android:textColor="#F0F8FF"
         android:textSize="20sp"
         android:layout_below="@+id/textDay"
         android:layout_alignLeft="@+id/textDay"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="Room"
-        android:textColor="#000000"
+        android:textColor="#F0F8FF "
         android:textSize="18sp"
         android:layout_below="@+id/textCourse"
         android:layout_alignLeft="@+id/textCourse"
@@ -39,7 +39,7 @@
         android:fontFamily="casual"
         android:text="DAY"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#F0F8FF "
         android:textSize="20sp" />
 
     <TextView
