@@ -18,13 +18,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".HomeActivity" />
         <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".SignUpFormActivity" />
         <activity
-            android:name=".MenuActivity"
-            android:label="@string/title_activity_menu"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".SignUpFormActivity"/>
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".FragmentMenu.ScheduleActivity"
+            android:label="ScheduleActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".AddReminderActivity" />
+        <activity android:name=".message"></activity>
     </application>
 
 </manifest>

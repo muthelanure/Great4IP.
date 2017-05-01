@@ -1,5 +1,6 @@
 package com.example.a6sigma.great4ip;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -33,6 +34,8 @@ public class SignUpFormActivity extends AppCompatActivity {
     private FirebaseDatabase mDatabase;
     private DatabaseReference mReference;
 
+    private ProgressDialog mProgressDialog;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +49,7 @@ public class SignUpFormActivity extends AppCompatActivity {
         mClass = (Spinner) findViewById(R.id.spinnerClass);
 
         mSignUp = (Button) findViewById(R.id.buttonSignUpForm);
+        mProgressDialog = new ProgressDialog(this);
 
         mDatabase = FirebaseDatabase.getInstance();
         mReference = mDatabase.getReference("tb_user");
@@ -55,8 +59,7 @@ public class SignUpFormActivity extends AppCompatActivity {
         mFaculty.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String faculty = mFaculty.getSelectedItem().toString();
-                setMajor(faculty);
+                setMajor(position);
             }
 
             @Override
@@ -67,8 +70,7 @@ public class SignUpFormActivity extends AppCompatActivity {
         mMajor.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String major = mMajor.getSelectedItem().toString();
-                setClass(major);
+                setClass(position);
             }
 
             @Override
@@ -100,9 +102,13 @@ public class SignUpFormActivity extends AppCompatActivity {
     }
 
     public void addUserDetail(SignUpFormModel signUpFormModel){
+        mProgressDialog.setMessage("Saving...");
+        mProgressDialog.show();
+
         mReference.child(signUpFormModel.getId_user()).setValue(signUpFormModel, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                mProgressDialog.dismiss();
                 if(databaseError != null){
                     Toast.makeText(SignUpFormActivity.this, "Please Try Again", Toast.LENGTH_SHORT).show();
                 } else {
@@ -112,29 +118,28 @@ public class SignUpFormActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
-    public void setMajor(String faculty){
-        int arrayMajor = showMajor(faculty);
+    public void setMajor(int position){
+        int arrayMajor = showMajor(position);
 
         ArrayAdapter<CharSequence> mMajorAdapter = ArrayAdapter.createFromResource(SignUpFormActivity.this, arrayMajor, android.R.layout.simple_spinner_item);
         mMajorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mMajor.setAdapter(mMajorAdapter);
     }
 
-    public int showMajor(String faculty){
+    public int showMajor(int faculty){
         int array = 0;
         switch (faculty){
-            case "Industrial Engineering":
+            case 0:
                 array = R.array.majorIE;
                 break;
 
-            case "Electrical Engineering":
+            case 1:
                 array = R.array.majorEE;
                 break;
 
-            case "Computing":
+            case 2:
                 array = R.array.majorC;
                 break;
             default:
@@ -142,39 +147,39 @@ public class SignUpFormActivity extends AppCompatActivity {
         return array;
     }
 
-    public void setClass(String major){
-        int arrayClass = showClass(major);
+    public void setClass(int position){
+        int arrayClass = showClass(position);
 
         ArrayAdapter<CharSequence> mClassAdapter = ArrayAdapter.createFromResource(SignUpFormActivity.this, arrayClass, android.R.layout.simple_spinner_item);
         mClassAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mClass.setAdapter(mClassAdapter);
     }
 
-    public int showClass(String major){
+    public int showClass(int major){
         int array = 0;
         switch (major){
-            case "Industrial Engineering":
+            case 0:
                 array = R.array.classIE;
                 break;
-            case "Information System":
+            case 1:
                 array = R.array.classIS;
                 break;
-            case "Electrical Engineering":
+            case 2:
                 array = R.array.classEE;
                 break;
-            case "Computer System":
+            case 3:
                 array = R.array.classEECS;
                 break;
-            case "Telecommunication Engineering":
+            case 4:
                 array = R.array.classTE;
                 break;
-            case "Physical Engineering":
+            case 5:
                 array = R.array.classPE;
                 break;
-            case "Computational Science":
+            case 6:
                 array = R.array.classCCS;
                 break;
-            case "Informatics":
+            case 7:
                 array = R.array.classIF;
                 break;
             default:

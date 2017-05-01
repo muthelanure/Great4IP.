@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Great4IP</string>
     <string name="forgot_password"><u>Forgot Password</u></string>
-    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_menu">HOME</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -11,6 +11,17 @@
     <string name="signup">Sign Up</string>
     <string name="nim">NIM</string>
     <string name="name">Full Name</string>
+
+    <string name="action_Reminder">
+    Class
+        18:00 - Finish
+        Eat with Mr.James in Hanamasa</string>
+
+    <string name="action_schedule">
+        Monday
+
+         08:30 - 11:30 Finance
+         11:30 - 14:30 IS Security</string>
 
     <array name="faculty">
         <item>Industrial Engineering</item>
@@ -45,6 +56,10 @@
         <item>SI-38-01</item>
         <item>SI-38-02</item>
         <item>SI-38-03</item>
+        <item>SI-38-04</item>
+        <item>SI-38-05</item>
+        <item>SI-38-06</item>
+        <item>SI-38-INT</item>
     </array>
 
     <array name="classEE">
@@ -81,5 +96,20 @@
         <item>IF-38-01</item>
         <item>IF-38-02</item>
         <item>IF-38-03</item>
+    </array>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <array name="reminder">
+        <item>30 minutes before</item>
+        <item>20 minutes before</item>
+        <item>15 minutes before</item>
+        <item>10 minutes before</item>
+        <item>5 minutes before</item>
+        <item>On time</item>
+    </array>
+
+    <array name="share">
+        <item>Private</item>
+        <item>Class</item>
     </array>
 </resources>
