@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.a6sigma.great4ip.Model.SignUpModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -107,7 +108,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         mProgressDialog.dismiss();
                         if (task.isSuccessful()) {
-                            Toast.makeText(SignUpActivity.this, "Register Successfully", Toast.LENGTH_SHORT).show();
+                            finish();
+                            Intent intent = new Intent(SignUpActivity.this, SignUpFormActivity.class);
+                            startActivity(intent);
                         } else {
                             Toast.makeText(SignUpActivity.this, "Could not register... please try again", Toast.LENGTH_SHORT).show();
                             reset();

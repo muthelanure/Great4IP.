@@ -1,4 +1,4 @@
-package com.example.a6sigma.great4ip;
+package com.example.a6sigma.great4ip.Model;
 
 /**
  * Created by lenovo on 21/02/2017.

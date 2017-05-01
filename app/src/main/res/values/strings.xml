@@ -1,4 +1,115 @@
 <resources>
     <string name="app_name">Great4IP</string>
     <string name="forgot_password"><u>Forgot Password</u></string>
+    <string name="title_activity_menu">HOME</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="home">HOME</string>
+    <string name="signup">Sign Up</string>
+    <string name="nim">NIM</string>
+    <string name="name">Full Name</string>
+
+    <string name="action_Reminder">
+    Class
+        18:00 - Finish
+        Eat with Mr.James in Hanamasa</string>
+
+    <string name="action_schedule">
+        Monday
+
+         08:30 - 11:30 Finance
+         11:30 - 14:30 IS Security</string>
+
+    <array name="faculty">
+        <item>Industrial Engineering</item>
+        <item>Electrical Engineering</item>
+        <item>Computing</item>
+    </array>
+
+    <array name="majorIE">
+        <item>Industrial Engineering</item>
+        <item>Information System</item>
+    </array>
+
+    <array name="majorEE">
+        <item>Electrical Engineering</item>
+        <item>Computer System</item>
+        <item>Telecommunication Engineering</item>
+        <item>Physics Engineering</item>
+    </array>
+
+    <array name="majorC">
+        <item>Computational Science</item>
+        <item>Informatics</item>
+    </array>
+
+    <array name="classIE">
+        <item>TI-38-01</item>
+        <item>TI-38-02</item>
+        <item>TI-38-03</item>
+    </array>
+
+    <array name="classIS">
+        <item>SI-38-01</item>
+        <item>SI-38-02</item>
+        <item>SI-38-03</item>
+        <item>SI-38-04</item>
+        <item>SI-38-05</item>
+        <item>SI-38-06</item>
+        <item>SI-38-INT</item>
+    </array>
+
+    <array name="classEE">
+        <item>EE-38-01</item>
+        <item>EE-38-02</item>
+        <item>EE-38-03</item>
+    </array>
+
+    <array name="classEECS">
+        <item>CS-38-01</item>
+        <item>CS-38-02</item>
+        <item>CS-38-03</item>
+    </array>
+
+    <array name="classTE">
+        <item>TE-38-01</item>
+        <item>TE-38-02</item>
+        <item>TE-38-03</item>
+    </array>
+
+    <array name="classPE">
+        <item>PE-38-01</item>
+        <item>PE-38-02</item>
+        <item>PE-38-03</item>
+    </array>
+
+    <array name="classCCS">
+        <item>CS-38-01</item>
+        <item>CS-38-02</item>
+        <item>CS-38-03</item>
+    </array>
+
+    <array name="classIF">
+        <item>IF-38-01</item>
+        <item>IF-38-02</item>
+        <item>IF-38-03</item>
+    </array>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <array name="reminder">
+        <item>30 minutes before</item>
+        <item>20 minutes before</item>
+        <item>15 minutes before</item>
+        <item>10 minutes before</item>
+        <item>5 minutes before</item>
+        <item>On time</item>
+    </array>
+
+    <array name="share">
+        <item>Private</item>
+        <item>Class</item>
+    </array>
 </resources>
