@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:background="#FFF"
+            android:background="@color/white"
             android:hint="Event"
             android:textColorHint="@color/biruAneh"
             android:textColor="@color/black"
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:background="#FFF"
+            android:background="@color/white"
             android:hint="Location"
             android:textColorHint="@color/biruAneh"
             android:textColor="@color/black"
@@ -96,8 +96,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="5"
-                android:background="#ffffff"
-                android:padding="10dp"/>
+                android:background="@color/white"
+                android:padding="10dp"
+                android:textColor="@color/biruAneh"
+                android:editable="false"
+                android:textAlignment="center"/>
 
             <ImageButton
                 android:id="@+id/buttonTime"
@@ -122,15 +125,56 @@
                 android:textColor="@color/biruAneh"
                 android:padding="16dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-
-                android:layout_marginRight="62dp"/>
+                android:layout_marginRight="50dp"/>
             <Spinner
-                android:layout_width="wrap_content"
+                android:id="@+id/spinnerTIme"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="9dp"
-                android:background="#ffffff"
-                android:entries="@array/reminder"></Spinner>
+                android:background="@color/white">
+            </Spinner>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:textColor="@color/biruAneh"
+                android:padding="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginRight="140dp"/>
+            <Spinner
+                android:id="@+id/spinnerShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="9dp"
+                android:background="@color/white">
+            </Spinner>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textColor="@color/biruAneh"
+            android:padding="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_marginRight="50dp"/>
+
+        <EditText
+            android:id="@+id/textNote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:padding="16dp"
+            android:gravity="top"/>
     </LinearLayout>
 </LinearLayout>
 </RelativeLayout>

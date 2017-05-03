@@ -6,12 +6,20 @@
     android:padding="15dp">
 
     <TextView
-        android:id="@+id/reminderTime"
+        android:id="@+id/reminderShare"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@color/biruAneh"/>
 
     <TextView
-        android:id="@+id/reminderContent"
+        android:id="@+id/reminderTime"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@color/biruAneh"/>
+
+    <TextView
+        android:id="@+id/reminderEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/biruAneh"/>
 </LinearLayout>
