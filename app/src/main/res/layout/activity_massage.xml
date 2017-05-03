@@ -87,7 +87,7 @@
         android:layout_marginBottom="10dp"
         android:layout_width="wrap_content"
         android:id="@+id/ic_tambah"
-        android:src="@drawable/ic_tambah"
+        android:src="@mipmap/ic_tambah"
         android:layout_height="wrap_content"
         />
 
