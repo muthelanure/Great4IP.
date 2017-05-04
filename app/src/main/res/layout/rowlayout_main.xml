@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="Room"
-        android:textColor="#F0F8FF "
+        android:textColor="#F0F8FF"
         android:textSize="18sp"
         android:layout_below="@+id/textCourse"
         android:layout_alignLeft="@+id/textCourse"
@@ -35,11 +35,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="#DC143C "
+        android:background="#DC143C"
         android:fontFamily="casual"
         android:text="DAY"
         android:textAlignment="center"
-        android:textColor="#F0F8FF "
+        android:textColor="#F0F8FF"
         android:textSize="20sp" />
 
     <TextView

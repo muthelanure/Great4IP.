@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".CreateMessageActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_message"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="left">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:text="Message"
+            android:textSize="40dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_message_new"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#000000"
+        android:gravity="left">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="18dp"
+            android:text="Cancel"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/new_massage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:text="new message"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/new_massage"
+            android:text="Send"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_message_new_under"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#faf0ed"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="36dp"
+            android:background="#ffffff"
+            android:ems="15"
+            android:hint="To"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#b9b3b2"
+            android:textSize="20dp"
+            />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="24dp"
+            android:background="#ffffff"
+            android:ems="15"
+            android:hint="Subjek"
+            android:inputType="text"
+            android:textColorHint="#b9b3b2"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText6"
+            android:layout_alignStart="@+id/editText6"
+            android:layout_below="@+id/editText6"
+            android:layout_marginTop="28dp"
+            android:text="Message"
+            android:textColor="#b9b3b2"
+            android:textSize="20dp"
+            />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff"
+            android:gravity="start|top"
+            android:lines="5"
+            android:textColor="#000000"/>
+
+        <ImageView
+            android:id="@+id/iv_preview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Picture"/>
+
+            <Button
+                android:id="@+id/button_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Send Location"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

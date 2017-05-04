@@ -8,6 +8,8 @@
     <color name="oren">#F2A361</color>
     <color name="biruAneh">#556D7F</color>
 
+    <color name="grey">#e1bee7</color>
     <color name="red">#FF0202</color>
     <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
 </resources>

@@ -107,4 +107,9 @@
         <item>5 minutes before</item>
         <item>On time</item>
     </array>
+
+    <array name="share">
+        <item>Private</item>
+        <item>Class</item>
+    </array>
 </resources>
