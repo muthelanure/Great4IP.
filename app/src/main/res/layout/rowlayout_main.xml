@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-
     android:layout_height="120dp"
     android:padding="2dp">
 
@@ -11,7 +10,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="Course"
-        android:textColor="#000000"
+        android:textColor="#F0F8FF"
         android:textSize="20sp"
         android:layout_below="@+id/textDay"
         android:layout_alignLeft="@+id/textDay"
@@ -24,7 +23,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="Room"
-        android:textColor="#000000"
+        android:textColor="#F0F8FF "
         android:textSize="18sp"
         android:layout_below="@+id/textCourse"
         android:layout_alignLeft="@+id/textCourse"
@@ -34,13 +33,14 @@
         android:id="@+id/textDay"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#DC143C "
         android:fontFamily="casual"
         android:text="DAY"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textAlignment="center"
+        android:textColor="#F0F8FF "
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textLecture"

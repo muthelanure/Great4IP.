@@ -55,7 +55,7 @@ public class ScheduleActivity extends Fragment {
 
         lv = (ListView) view.findViewById(R.id.lv);
 
-        Pil = new String[] {"MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY","FRIDAY","SATURDAY",  "SUNDAY"};
+        Pil = new String[] {   "MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY","SUNDAY"};
         Gbr = new String[] {Integer.toString(R.drawable.day),
                 Integer.toString(R.drawable.day),
                 Integer.toString(R.drawable.day),
@@ -63,7 +63,6 @@ public class ScheduleActivity extends Fragment {
                 Integer.toString(R.drawable.day),
                 Integer.toString(R.drawable.day),
                 Integer.toString(R.drawable.day) };
-
 
         mylist = new ArrayList<HashMap<String,String>>();
         for (int i = 0; i < Pil.length; i++) {
