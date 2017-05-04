@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.JsonReader;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,13 +22,23 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.example.a6sigma.great4ip.Model.ScheduleModel;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.wdullaer.materialdatetimepicker.date.MonthAdapter;
 
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Acer on 20/04/2017.
@@ -45,8 +56,12 @@ public class AddReminderActivity extends AppCompatActivity {
     private Calendar mCalendar;
     private int mHour;
     private int mMinute;
-    private String mAmPm;
-//    private TimePickerDialog.OnTimeSetListener mTimeSetListener;
+
+    private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
+    private FirebaseDatabase mDatabase;
+    private DatabaseReference mReference;
+    private List<String> mList;
 
     private TextView mButtonCancel;
     private TextView mButtonSave;
@@ -54,6 +69,11 @@ public class AddReminderActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_reminder);
+
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        mDatabase = FirebaseDatabase.getInstance();
+        mReference = mDatabase.getReference("tb_studentSchedule");
 
         mRelativeLayout = (RelativeLayout) findViewById(R.id.layout);
         mButtonTime = (ImageButton) findViewById(R.id.buttonTime);
@@ -96,11 +116,27 @@ public class AddReminderActivity extends AppCompatActivity {
         adapterReminder.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinnerReminder.setAdapter(adapterReminder);
 
-        mSpinnerShare = (Spinner) findViewById(R.id.spinnerShare);
-        ArrayAdapter<CharSequence> adapterShare = ArrayAdapter.createFromResource(AddReminderActivity.this, R.array.share, R.layout.spinner_reminder);
-        adapterShare.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpinnerShare.setAdapter(adapterShare);
+        mList = new ArrayList<>();
+        mReference.child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot idSnapshot : dataSnapshot.getChildren()){
+                    ScheduleModel scheduleModel = idSnapshot.getValue(ScheduleModel.class);
+                    mList.add(scheduleModel.getClassRoom()+" "+scheduleModel.getSchedule_id());
 
+                    System.out.println("Kelas: "+scheduleModel.getClassRoom());
+                }
+
+                mSpinnerShare = (Spinner) findViewById(R.id.spinnerShare);
+                ArrayAdapter<String> adapterShare = new ArrayAdapter<String>(AddReminderActivity.this, R.layout.spinner_reminder, mList);
+                adapterShare.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                mSpinnerShare.setAdapter(adapterShare);
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
         mButtonCancel = (TextView) findViewById(R.id.button_cancel);
         mButtonCancel.setOnClickListener(new View.OnClickListener() {
