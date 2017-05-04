@@ -40,12 +40,12 @@ public class CreateMessageActivity extends AppCompatActivity {
             }
         });
 
-        button_location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(context, LocationActivity.class));
-            }
-        });
+//        button_location.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(context, LocationActivity.class));
+//            }
+//        });
     }
 
     private void openCamera() {
