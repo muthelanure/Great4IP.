@@ -11,6 +11,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.a6sigma.great4ip.FragmentMessage.DraftFragment;
+import com.example.a6sigma.great4ip.FragmentMessage.InboxFragment;
+import com.example.a6sigma.great4ip.FragmentMessage.SentFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -5,18 +5,19 @@ package com.example.a6sigma.great4ip.Model;
  */
 
 public class ScheduleModel {
-    private String classRoom, class_location, day, key, schedule_id, time;
+    private String classRoom, class_location, day, key, schedule_id, time, course_id;
 
     public ScheduleModel() {
     }
 
-    public ScheduleModel(String classRoom, String class_location, String day, String key, String schedule_id, String time) {
+    public ScheduleModel(String classRoom, String class_location, String day, String key, String schedule_id, String time, String course_id) {
         this.classRoom = classRoom;
         this.class_location = class_location;
         this.day = day;
         this.key = key;
         this.schedule_id = schedule_id;
         this.time = time;
+        this.course_id = course_id;
     }
 
     public String getClassRoom() {
@@ -65,5 +66,13 @@ public class ScheduleModel {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public String getCourse_id() {
+        return course_id;
+    }
+
+    public void setCourse_id(String course_id) {
+        this.course_id = course_id;
     }
 }
